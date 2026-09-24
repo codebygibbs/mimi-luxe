@@ -1,0 +1,56 @@
+/* =========================================================
+   MIMI LUXE — ACCOUNT PAGE
+   Extends customer.css without changing account.js hooks.
+========================================================= */
+
+.account-page { padding: 0 0 90px; }
+
+.account-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 68px 0 52px;
+  background:
+    radial-gradient(circle at 80% 10%, rgba(197,143,131,.20), transparent 20rem),
+    linear-gradient(135deg, #f5e9e2, #fbf8f3 62%, #edf0e7);
+  border-bottom: 1px solid var(--ml-line);
+}
+
+.account-hero::after {
+  content: "";
+  position: absolute;
+  right: -80px;
+  bottom: -170px;
+  width: 360px;
+  height: 360px;
+  border: 1px solid rgba(139,93,79,.13);
+  border-radius: 50%;
+}
+
+.account-hero .container { position: relative; z-index: 1; }
+.account-eyebrow { margin: 0 0 10px; color: var(--ml-clay); font-size: 10px; font-weight: 850; letter-spacing: .18em; text-transform: uppercase; }
+.account-hero h1 { margin: 0; font: 500 clamp(38px,5vw,58px)/1.04 Georgia, serif; letter-spacing: -.025em; }
+.account-container { width: min(calc(100% - 48px), 1100px); margin: 0 auto; }
+.account-section { padding: 48px 0 0; }
+.account-grid { display: grid; grid-template-columns: minmax(0,1.1fr) minmax(300px,.9fr); gap: 20px; }
+.account-card { padding: 25px; }
+.account-card-heading { margin: 0 0 20px; font: 500 25px/1.1 Georgia, serif; }
+.account-card-label { margin: 0 0 7px; color: var(--ml-muted); font-size: 10px; font-weight: 850; letter-spacing: .1em; text-transform: uppercase; }
+.account-card-text { margin: 0; color: var(--ml-muted); line-height: 1.7; }
+.profile-details { border-top: 1px solid var(--ml-line); }
+.profile-row { display: flex; justify-content: space-between; gap: 20px; padding: 14px 0; border-bottom: 1px solid var(--ml-line); }
+.profile-row span { color: var(--ml-muted); font-size: 12px; }
+.profile-row strong { text-align: right; word-break: break-word; }
+.account-message { margin-bottom: 20px; }
+.account-card-danger { border-color: #ead0cb; background: #fffaf9; }
+.nav-logout { cursor: pointer; }
+
+@media (max-width: 760px) {
+  .account-hero { padding: 48px 0 38px; }
+  .account-container { width: calc(100% - 32px); }
+  .account-section { padding-top: 30px; }
+  .account-grid { grid-template-columns: 1fr; gap: 14px; }
+  .account-card { padding: 21px 18px; }
+  .profile-row { align-items: flex-start; flex-direction: column; gap: 5px; }
+  .profile-row strong { text-align: left; }
+  .account-card .btn { width: 100%; }
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Order Details | Mimi Luxe Admin</title>
+
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body class="admin-body">
+
+<header class="admin-header">
+
+    <nav class="admin-nav">
+
+        <a
+            href="dashboard.html"
+            class="admin-logo"
+        >
+            Mimi Luxe
+            <span>Administration</span>
+        </a>
+
+
+        <div class="admin-nav-links">
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="add-product.html">
+               + Add Product
+            </a>
+
+            <a href="../customer/index.html">
+                View Store
+            </a>
+
+            <a
+                href="#"
+                id="admin-logout"
+                class="admin-nav-logout"
+            >
+                Logout
+            </a>
+
+            <a
+                href="store-settings.html"
+            >
+                Store Settings
+            </a>
+
+        </div>
+
+
+        <button
+            type="button"
+            id="admin-menu-toggle"
+            class="admin-menu-toggle"
+            aria-label="Open menu"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </nav>
+
+</header>
+
+
+<main class="admin-main admin-page">
+
+    <section class="admin-page-heading">
+
+        <div>
+
+            <p class="admin-eyebrow">
+                ORDER MANAGEMENT
+            </p>
+
+            <h1>
+                Order Details
+            </h1>
+
+            <p>
+                Review the order information and update its status.
+            </p>
+
+        </div>
+
+
+        <a
+            href="dashboard.html"
+            class="admin-secondary-button"
+        >
+            ← Back to Dashboard
+        </a>
+
+    </section>
+
+
+    <section
+        id="order-details-container"
+        class="admin-order-details"
+    >
+
+        <p
+            id="order-details-message"
+            class="admin-loading-message"
+        >
+            Loading order details...
+        </p>
+
+    </section>
+
+</main>
+
+
+<script src="js/admin-nav.js"></script>
+<script src="js/admin-order-details.js"></script>
+
+</body>
+</html>

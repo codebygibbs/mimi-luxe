@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>My Account | Mimi Luxe</title>
+
+    <link rel="stylesheet" href="css/customer.css">
+    <link rel="stylesheet" href="css/account.css">
+</head>
+
+<body class="customer-body">
+
+<header class="site-header">
+      <nav class="site-nav container">
+        <a class="site-logo" href="index.html"
+          >Mimi Luxe<span>Beauty • Fragrance • Skincare</span></a
+        >
+        <div class="nav-links" id="nav-links">
+          <a href="index.html" data-i18n="home">Home</a
+          ><a href="products.html" data-i18n="shop">Shop</a
+          ><a href="orders.html" data-auth="logged-in"
+            >Orders</a
+          ><a href="account.html">Account</a>
+          <a href="contact.html">Contact</a>
+          <a href="login.html" data-auth="logged-out" data-i18n="login"
+            >Login</a
+          ><a href="register.html" data-auth="logged-out" data-i18n="register"
+            >Create Account</a
+          ><a
+            href="#"
+            data-auth="logged-in"
+            data-action="logout"
+            data-i18n="logout"
+            >Logout</a
+          >
+        </div>
+        <div class="nav-tools">
+          <label class="sr-only" for="language-select" data-i18n="language"
+            >Language</label
+          ><select
+            id="language-select"
+            class="nav-tool language-select"
+            aria-label="Language"
+          ></select
+          ><a class="nav-tool cart-link" href="cart.html"
+            ><img
+              class="cart-icon"
+              src="assets/icons/cart.svg"
+              alt=""
+              aria-hidden="true"
+            /><span class="sr-only" data-i18n="cart">Cart</span
+            ><span class="cart-count">0</span></a
+          ><button id="menu-toggle" class="menu-toggle" aria-label="Open menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+
+<main class="account-page">
+
+    <section class="account-hero">
+
+        <div class="account-container">
+
+            <p class="account-eyebrow">
+                MY ACCOUNT
+            </p>
+
+            <h1>
+                Welcome back
+            </h1>
+
+            <p>
+                Manage your account and keep track of your orders.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="account-section">
+
+        <div class="account-container">
+
+            <div
+                id="account-message"
+                class="account-message"
+            ></div>
+
+
+            <div class="account-grid">
+
+
+                <!-- PROFILE -->
+
+                <article class="account-card">
+
+                    <div class="account-card-heading">
+
+                        <div>
+                            <p class="account-card-label">
+                                PROFILE
+                            </p>
+
+                            <h2>
+                                Your details
+                            </h2>
+                        </div>
+
+                    </div>
+
+
+                    <div class="profile-details">
+
+                        <div class="profile-row">
+
+                            <span>
+                                Name
+                            </span>
+
+                            <strong id="customer-name">
+                                Loading...
+                            </strong>
+
+                        </div>
+
+
+                        <div class="profile-row">
+
+                            <span>
+                                Email
+                            </span>
+
+                            <strong id="customer-email">
+                                Loading...
+                            </strong>
+
+                        </div>
+
+
+                        <div class="profile-row">
+
+                            <span>
+                                Customer ID
+                            </span>
+
+                            <strong id="customer-id">
+                                Loading...
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ORDERS -->
+
+                <article class="account-card">
+
+                    <div class="account-card-heading">
+
+                        <div>
+
+                            <p class="account-card-label">
+                                ORDERS
+                            </p>
+
+                            <h2>
+                                Your purchases
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <p class="account-card-text">
+                        View your previous orders, check their
+                        status and see the products included in
+                        each order.
+                    </p>
+
+
+                    <a
+                        href="orders.html"
+                        class="btn btn-primary"
+                    >
+                        View My Orders
+                    </a>
+
+                </article>
+
+
+                <!-- SHOPPING -->
+
+                <article class="account-card">
+
+                    <div class="account-card-heading">
+
+                        <div>
+
+                            <p class="account-card-label">
+                                SHOPPING
+                            </p>
+
+                            <h2>
+                                Continue shopping
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <p class="account-card-text">
+                        Browse the available products and add
+                        something to your cart.
+                    </p>
+
+
+                    <a
+                        href="products.html"
+                        class="btn btn-secondary"
+                    >
+                        Continue Shopping
+                    </a>
+
+                </article>
+
+
+                <!-- ACCOUNT ACTION -->
+
+                <article class="account-card account-card-danger">
+
+                    <div class="account-card-heading">
+
+                        <div>
+
+                            <p class="account-card-label">
+                                ACCOUNT
+                            </p>
+
+                            <h2>
+                                Sign out
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <p class="account-card-text">
+                        Sign out of your Mimi Luxe customer account
+                        on this device.
+                    </p>
+
+
+                    <button
+                        type="button"
+                        id="account-logout-button"
+                        class="btn btn-danger"
+                    >
+                        Logout
+                    </button>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="site-footer">
+
+    <div class="footer-container">
+
+        <div>
+            <h3>Mimi Luxe</h3>
+
+            <p>
+                Thank you for shopping with us.
+            </p>
+        </div>
+
+        <div>
+            <h3>Customer Service</h3>
+
+            <a href="products.html">
+                Shop
+            </a>
+
+            <a href="orders.html">
+                My Orders
+            </a>
+
+            <a href="account.html">
+                My Account
+            </a>
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="js/customer-common.js"></script>
+<script src="js/account.js"></script>
+
+
+</body>
+</html>

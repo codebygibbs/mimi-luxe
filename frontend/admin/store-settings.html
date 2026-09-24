@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Store Settings | Mimi Luxe</title>
+
+    <link rel="stylesheet" href="./css/admin.css">
+</head>
+
+<body class="admin-body">
+    <header class="admin-header">
+
+    <nav class="admin-nav">
+
+        <a
+            href="dashboard.html"
+            class="admin-logo"
+        >
+            Mimi Luxe
+            <span>Administration</span>
+        </a>
+
+
+        <div class="admin-nav-links">
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="add-product.html">
+               + Add Product
+            </a>
+
+            <a href="../customer/index.html">
+                View Store
+            </a>
+
+            <a
+                href="#"
+                id="admin-logout"
+                class="admin-nav-logout"
+            >
+                Logout
+            </a>
+
+            <a
+                href="store-settings.html"
+            >
+                Store Settings
+            </a>
+
+        </div>
+
+
+        <button
+            type="button"
+            id="admin-menu-toggle"
+            class="admin-menu-toggle"
+            aria-label="Open menu"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </nav>
+
+</header>
+
+    <main class="admin-main admin-page">
+
+        <section class="admin-content">
+
+            <div class="admin-page-header">
+                <div>
+                    <p class="admin-eyebrow">Mimi Luxe</p>
+                    <h1>Store Settings</h1>
+                    <p>
+                        Manage the business information customers
+                        see throughout the store.
+                    </p>
+                </div>
+            </div>
+
+
+            <form
+                id="store-settings-form"
+                class="admin-form"
+            >
+
+                <!-- STORE INFORMATION -->
+
+                <div class="admin-form-section">
+
+                    <h2>Store Information</h2>
+
+                    <div class="admin-form-group">
+
+                        <label for="store-name">
+                            Store Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="store-name"
+                            name="store_name"
+                            required
+                            minlength="2"
+                            maxlength="255"
+                            placeholder="Mimi Luxe"
+                        >
+
+                    </div>
+
+
+                    <div class="admin-form-group">
+
+                        <label for="pickup-address">
+                            Pickup Address
+                        </label>
+
+                        <textarea
+                            id="pickup-address"
+                            name="pickup_address"
+                            rows="4"
+                            required
+                            placeholder="Enter the store pickup address"
+                        ></textarea>
+
+                        <small class="admin-form-help">
+                            This address will be shown to customers
+                            who choose pickup.
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CONTACT INFORMATION -->
+
+                <div class="admin-form-section">
+
+                    <h2>Contact Information</h2>
+
+                    <div class="admin-form-group">
+
+                        <label for="phone">
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="Enter business phone number"
+                        >
+
+                    </div>
+
+
+                    <div class="admin-form-group">
+
+                        <label for="whatsapp">
+                            WhatsApp Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="whatsapp"
+                            name="whatsapp"
+                            placeholder="Enter WhatsApp number"
+                        >
+
+                        <small class="admin-form-help">
+                            Use the number customers should contact
+                            for WhatsApp support.
+                        </small>
+
+                    </div>
+
+
+                    <div class="admin-form-group">
+
+                        <label for="email">
+                            Business Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter business email"
+                        >
+
+                    </div>
+
+                    <div class="admin-form-group">
+
+                        <label for="admin-notification-email">
+                            Admin notification email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="admin-notification-email"
+                            name="admin-notification-email"
+                            placeholder="Email for new order notifications."
+                        >
+
+                    </div>
+
+
+                    <div class="admin-form-group">
+
+                    <label for="admin-notification-phone">
+                        Admin notification phone
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="admin-notification-phone"
+                        name="admin-notification-phone"
+                        placeholder="Phone for new order SMS notifications."
+                    >
+
+                    </div>
+
+                </div>
+
+
+                <!-- BUSINESS HOURS -->
+
+                <div class="admin-form-section">
+
+                    <h2>Business Hours</h2>
+
+                    <div class="admin-form-group">
+
+                        <label for="business-hours">
+                            Opening Hours
+                        </label>
+
+                        <textarea
+                            id="business-hours"
+                            name="business_hours"
+                            rows="4"
+                            placeholder="Example: Monday - Saturday: 9:00 AM - 6:00 PM"
+                        ></textarea>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MESSAGE -->
+
+                <div
+                    id="store-settings-message"
+                    class="admin-message"
+                    aria-live="polite"
+                ></div>
+
+                <div id="notification"></div>
+
+
+                <!-- ACTIONS -->
+
+                <div class="admin-form-actions">
+
+                    <a
+                        href="dashboard.html"
+                        class="admin-secondary-button"
+                    >
+                        Cancel
+                    </a>
+
+                    <button
+                        type="submit"
+                        class="admin-primary-button"
+                    >
+                        Save Changes
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <script src="./js/store-settings.js"></script>
+    <script src="./js/admin-nav.js"></script>
+</body>
+</html>

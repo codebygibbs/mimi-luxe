@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Order Details | Mimi Luxe</title>
+    <link rel="stylesheet" href="css/customer.css" />
+  </head>
+  <body id="top" class="customer-body">
+    <header class="site-header">
+      <nav class="site-nav container">
+        <a class="site-logo" href="index.html"
+          >Mimi Luxe<span>Beauty • Fragrance • Skincare</span></a
+        >
+        <div class="nav-links" id="nav-links">
+          <a href="index.html" data-i18n="home">Home</a
+          ><a href="products.html" data-i18n="shop">Shop</a
+          ><a href="orders.html" data-auth="logged-in"
+            >Orders</a
+          ><a href="account.html">Account</a>
+          <a href="contact.html">Contact</a>
+          <a href="login.html" data-auth="logged-out" data-i18n="login"
+            >Login</a
+          ><a href="register.html" data-auth="logged-out" data-i18n="register"
+            >Create Account</a
+          ><a
+            href="#"
+            data-auth="logged-in"
+            data-action="logout"
+            data-i18n="logout"
+            >Logout</a
+          >
+        </div>
+        <div class="nav-tools">
+          <label class="sr-only" for="language-select" data-i18n="language"
+            >Language</label
+          ><select
+            id="language-select"
+            class="nav-tool language-select"
+            aria-label="Language"
+          ></select
+          ><a class="nav-tool cart-link" href="cart.html"
+            ><img
+              class="cart-icon"
+              src="assets/icons/cart.svg"
+              alt=""
+              aria-hidden="true"
+            /><span class="sr-only" data-i18n="cart">Cart</span
+            ><span class="cart-count">0</span></a
+          ><button id="menu-toggle" class="menu-toggle" aria-label="Open menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main class="site-main">
+      <div class="container page-heading">
+        <p class="eyebrow" data-i18n="orderLabel">ORDER</p>
+        <h1 data-i18n="orderDetails">Order Details</h1>
+        <p data-i18n="reviewOrder">
+          Review your order, items and current fulfilment status.
+        </p>
+      </div>
+      <section class="section section-tight">
+        <div class="container">
+          <div id="order-detail" class="card order-card">
+            <div id="order-message" class="empty" data-i18n="loadingOrder">
+              Loading order...
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="customer-footer" class="site-footer"></footer>
+    <script src="js/customer-common.js"></script>
+    <script src="js/order-details.js"></script>
+    
+  </body>
+</html>

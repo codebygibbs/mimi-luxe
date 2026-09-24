@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Admin Dashboard | Mimi Luxe</title>
+    <link rel="stylesheet" href="css/admin.css">
+
+</head>
+
+
+<body class="admin-body">
+
+
+<header class="admin-header">
+
+    <nav class="admin-nav">
+
+        <a
+            href="dashboard.html"
+            class="admin-logo"
+        >
+            Mimi Luxe
+            <span>Administration</span>
+        </a>
+
+
+        <div class="admin-nav-links">
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="add-product.html">
+               + Add Product
+            </a>
+
+            <a href="../customer/index.html">
+                View Store
+            </a>
+            
+            <a href="admin-register.html">Register</a>
+
+            <a
+                href="#"
+                id="admin-logout"
+                class="admin-nav-logout"
+            >
+                Logout
+            </a>
+
+            <a
+                href="store-settings.html"
+            >
+                Store Settings
+            </a>
+
+        </div>
+
+
+        <button
+            type="button"
+            id="admin-menu-toggle"
+            class="admin-menu-toggle"
+            aria-label="Open menu"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </nav>
+
+</header>
+
+
+<main class="admin-main admin-page">
+
+
+    <section class="admin-page-heading">
+
+        <p class="eyebrow">
+            MIMI LUXE ADMINISTRATION
+        </p>
+
+        <h1>
+            Dashboard
+        </h1>
+
+        <p>
+            Manage your catalogue, orders and customers from one place.
+        </p>
+
+    </section>
+
+
+    <!-- STATS -->
+
+    <section class="admin-stats">
+
+
+        <article class="admin-stat-card">
+
+            <p class="admin-stat-label">
+                Total Products
+            </p>
+
+            <p
+                id="total-products"
+                class="admin-stat-value"
+            >
+                0
+            </p>
+
+            <small>
+                Products in catalogue
+            </small>
+
+        </article>
+
+
+        <article class="admin-stat-card">
+
+            <p class="admin-stat-label">
+                Total Orders
+            </p>
+
+            <p
+                id="total-orders"
+                class="admin-stat-value"
+            >
+                0
+            </p>
+
+            <small>
+                Customer orders
+            </small>
+
+        </article>
+
+
+        <article class="admin-stat-card">
+
+            <p class="admin-stat-label">
+                Total Customers
+            </p>
+
+            <p
+                id="total-customers"
+                class="admin-stat-value"
+            >
+                0
+            </p>
+
+            <small>
+                Registered customers
+            </small>
+
+        </article>
+
+
+    </section>
+
+
+    <!-- PRODUCTS -->
+
+    <section class="admin-panel">
+
+
+        <div class="admin-panel-header">
+
+            <div>
+
+                <h2>
+                    Products
+                </h2>
+
+                <p>
+                    Manage your product catalogue.
+                </p>
+
+            </div>
+
+
+            <a
+                href="add-product.html"
+                class="admin-btn admin-btn-primary"
+            >
+               + Add Product
+            </a>
+
+        </div>
+
+
+        <div class="admin-table-wrapper">
+
+            <table class="admin-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>Product</th>
+                        <th>Brand</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                        <th>Stock</th>
+                        <th>Availability</th>
+                        <th>Actions</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="products-body">
+
+                    <tr>
+
+                        <td
+                            colspan="7"
+                            class="admin-loading"
+                        >
+                            Loading products...
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <div id="admin-products-pagination" class="admin-pagination"></div>
+
+    </section>
+
+
+    <!-- ORDERS -->
+
+    <section class="admin-panel">
+
+
+        <div class="admin-panel-header">
+
+            <div>
+
+                <h2>
+                    Recent Orders
+                </h2>
+
+                <p>
+                    View and manage customer orders.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="admin-table-wrapper">
+
+            <table class="admin-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>Order</th>
+                        <th>Customer</th>
+                        <th>Total</th>
+                        <th>Fulfillment</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="orders-body">
+
+                    <tr>
+
+                        <td
+                            colspan="7"
+                            class="admin-loading"
+                        >
+                            Loading orders...
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<script src="js/admin-nav.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

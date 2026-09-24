@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Mimi Luxe | Beauty, Fragrance & Skincare</title>
+    <link rel="stylesheet" href="css/customer.css" />
+  </head>
+  <body id="top" class="customer-body">
+    
+    <header class="site-header">
+      <nav class="site-nav container">
+        <a class="site-logo" href="index.html"
+          >Mimi Luxe<span>Beauty • Fragrance • Skincare</span></a
+        >
+        <div class="nav-links" id="nav-links">
+          <a href="index.html" data-i18n="home">Home</a
+          ><a href="products.html" data-i18n="shop">Shop</a
+          ><a href="orders.html" data-auth="logged-in"
+            >Orders</a
+          ><a href="account.html">Account</a>
+          <a href="contact.html">Contact</a>
+          <a href="login.html" data-auth="logged-out" data-i18n="login"
+            >Login</a
+          ><a href="register.html" data-auth="logged-out" data-i18n="register"
+            >Create Account</a
+          ><a
+            href="#"
+            data-auth="logged-in"
+            data-action="logout"
+            data-i18n="logout"
+            >Logout</a
+          >
+        </div>
+        <div class="nav-tools">
+          <label class="sr-only" for="language-select" data-i18n="language"
+            >Language</label
+          ><select
+            id="language-select"
+            class="nav-tool language-select"
+            aria-label="Language"
+          ></select
+          ><a class="nav-tool cart-link" href="cart.html"
+            ><img
+              class="cart-icon"
+              src="assets/icons/cart.svg"
+              alt=""
+              aria-hidden="true"
+            /><span class="sr-only" data-i18n="cart">Cart</span
+            ><span class="cart-count">0</span></a
+          ><button id="menu-toggle" class="menu-toggle" aria-label="Open menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main class="site-main">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <p class="eyebrow">MIMI LUXE</p>
+            <h1 data-i18n="heroTitle">
+              Beauty, fragrance and skincare selected for your everyday.
+            </h1>
+            <p data-i18n="heroDescription">
+              Discover beauty, fragrance and skincare products selected with
+              care for your everyday routine and personal style.
+            </p>
+            <div class="hero-actions">
+              <a
+                class="btn btn-primary"
+                href="products.html"
+                data-i18n="shopCollection"
+                >Explore Collection</a
+              ><a
+                class="btn btn-secondary"
+                href="#service"
+                data-i18n="customerService"
+                >Customer Service</a
+              >
+            </div>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <div class="hero-art-inner">
+              <span>MIMI</span><strong>LUXE</strong
+              ><small>BEAUTY · FRAGRANCE · SKINCARE</small>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow" data-i18n="curated">CURATED FOR YOU</p>
+              <h2 data-i18n="featured">Featured products</h2>
+              <p data-i18n="featuredDescription">
+                Freshly loaded from our live catalogue.
+              </p>
+            </div>
+            <a
+              class="btn btn-secondary"
+              href="products.html"
+              data-i18n="viewAll"
+              >View all</a
+            >
+          </div>
+          <div id="featured-products" class="product-grid">
+            <div class="empty" data-i18n="loadingProducts">
+              Loading products...
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section service-section" id="service">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow" data-i18n="hereToHelp">HERE TO HELP</p>
+              <h2 data-i18n="customerService">Customer Service</h2>
+              <p data-i18n="supportText">
+                We are here to make your shopping experience simple.
+              </p>
+            </div>
+          </div>
+          <div class="service-grid">
+            <article class="service-card">
+              <div class="service-icon">01</div>
+              <h3 data-i18n="orderSupport">Order Support</h3>
+              <p data-i18n="orderSupportText">
+                Need help with an order? Sign in to view your order history and
+                current status.
+              </p>
+            </article>
+            <article class="service-card">
+              <div class="service-icon">02</div>
+              <h3 data-i18n="deliveryPickup">Delivery & Pickup</h3>
+              <p data-i18n="deliveryPickupText">
+                Choose delivery or pickup during checkout. Your order is created
+                only after the required location is provided.
+              </p>
+            </article>
+            <article class="service-card">
+              <div class="service-icon">03</div>
+              <h3 data-i18n="productQuestions">Product Questions</h3>
+              <p data-i18n="productQuestionsText">
+                For product questions, use the product details and catalogue
+                information before purchasing.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section trust-section">
+        <div class="container trust-grid">
+          <div>
+            <p class="eyebrow" data-i18n="whyMimi">WHY MIMI LUXE</p>
+            <h2 data-i18n="trustTitle">
+              A polished shopping experience from catalogue to order.
+            </h2>
+          </div>
+          <div class="trust-points">
+            <div>
+              <strong>01</strong
+              ><span data-i18n="trustOne"
+                >Live catalogue connected directly to your store backend.</span
+              >
+            </div>
+            <div>
+              <strong>02</strong
+              ><span data-i18n="trustTwo"
+                >Simple delivery or pickup checkout with stock validation.</span
+              >
+            </div>
+            <div>
+              <strong>03</strong
+              ><span data-i18n="trustThree"
+                >Private customer orders protected by your customer login.</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="customer-footer" class="site-footer"></footer>
+    <button
+      class="back-to-top"
+      id="back-to-top"
+      type="button"
+      data-i18n="backToTop"
+    >
+      Back to top
+    </button>
+    <script src="js/customer-common.js"></script>
+    <script src="../customer/js/index.js"></script>
+    <script>
+      document.getElementById("back-to-top").onclick = () =>
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    </script>
+  </body>
+</html>

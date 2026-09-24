@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Customer Login | Mimi Luxe</title>
+    <link rel="stylesheet" href="css/customer.css" />
+  </head>
+  <body id="top" class="customer-body">
+    <!--  -->
+    <main class="site-main auth-wrap">
+      <section class="auth-card">
+        <p class="eyebrow" data-i18n="account">CUSTOMER ACCOUNT</p>
+        <a class="site-logo auth-logo" href="index.html"
+          >Mimi Luxe<span>Customer Account</span></a
+        >
+        <h1 data-i18n="welcomeBack">Welcome back</h1>
+        <p data-i18n="loginDescription">
+          Sign in to manage your orders and complete checkout.
+        </p>
+        <div id="login-message"></div>
+        <form id="login-form" class="form-stack">
+          <div class="field">
+            <label data-i18n="email">Email</label
+            ><input id="email" type="email" required autocomplete="email" />
+          </div>
+          <div class="field">
+            <label data-i18n="password">Password</label
+            ><input
+              id="password"
+              type="password"
+              required
+              autocomplete="current-password"
+            />
+          </div>
+
+          <a href="forgot-password.html" class="forgot-password-link">Forgot password?</a>
+
+          <button class="btn btn-primary" type="submit" data-i18n="signIn">
+            Sign in
+          </button>
+        </form>
+        <div class="auth-footer">
+          <span data-i18n="newCustomer">New to Mimi Luxe?</span>
+          <a href="register.html" data-i18n="createAccount">Create account</a>
+        </div>
+      </section>
+    </main>
+    <footer id="customer-footer" class="site-footer"></footer>
+    <script src="js/customer-common.js"></script>
+    <script src="../customer/js/login.js"></script>
+  </body>
+</html>

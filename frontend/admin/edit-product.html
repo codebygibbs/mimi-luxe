@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Edit Product | Mimi Luxe Admin</title>
+
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body class="admin-body">
+
+<header class="admin-header">
+
+    <nav class="admin-nav">
+
+        <a
+            href="dashboard.html"
+            class="admin-logo"
+        >
+            Mimi Luxe
+            <span>Administration</span>
+        </a>
+
+
+        <div class="admin-nav-links">
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="add-product.html">
+               + Add Product
+            </a>
+
+            <a href="../customer/index.html">
+                View Store
+            </a>
+
+            <a
+                href="#"
+                id="admin-logout"
+                class="admin-nav-logout"
+            >
+                Logout
+            </a>
+
+            <a
+                href="store-settings.html"
+            >
+                Store Settings
+            </a>
+
+        </div>
+
+
+        <button
+            type="button"
+            id="admin-menu-toggle"
+            class="admin-menu-toggle"
+            aria-label="Open menu"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </nav>
+
+</header>
+
+
+<main class="admin-main admin-page">
+
+    <section class="admin-page-heading">
+
+        <div>
+            <p class="admin-eyebrow">PRODUCT MANAGEMENT</p>
+
+            <h1>Edit Product</h1>
+
+            <p>
+                Update your product information, pricing, inventory,
+                and availability.
+            </p>
+        </div>
+
+        <a href="dashboard.html" class="admin-secondary-button">
+            ← Back to Dashboard
+        </a>
+
+    </section>
+
+
+    <section class="admin-form-section">
+
+        <form id="edit-product-form" class="admin-form">
+
+            <div id="edit-product-message" class="admin-form-message"></div>
+
+
+            <div class="admin-form-grid">
+
+                <div class="admin-form-group">
+                    <label for="name">
+                        Product Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter product name"
+                        required
+                    >
+                </div>
+
+
+                <div class="admin-form-group">
+                    <label for="brand">
+                        Brand
+                    </label>
+
+                    <input
+                        type="text"
+                        id="brand"
+                        name="brand"
+                        placeholder="Enter brand"
+                        required
+                    >
+                </div>
+
+
+                <div class="admin-form-group">
+                    <label for="category">
+                        Category
+                    </label>
+
+                    <input
+                        type="text"
+                        id="category"
+                        name="category"
+                        placeholder="Enter category"
+                        required
+                    >
+                </div>
+
+
+                <div class="admin-form-group">
+                    <label for="price">
+                        Price
+                    </label>
+
+                    <input
+                        type="number"
+                        id="price"
+                        name="price"
+                        min="0"
+                        step="0.01"
+                        placeholder="0.00"
+                        required
+                    >
+                </div>
+
+
+                <div class="admin-form-group">
+                    <label for="stock">
+                        Stock
+                    </label>
+
+                    <input
+                        type="number"
+                        id="stock_quantity"
+                        name="stock"
+                        min="0"
+                        step="1"
+                        placeholder="Enter stock quantity"
+                        required
+                    >
+                </div>
+
+
+                <div class="admin-form-group">
+                    <label for="product-image">
+                        Product Image
+                    </label>
+
+                    <input
+                        type="file"
+                        id="product-image"
+                        name="product-image"
+                        accept="image/jpeg,image/png,image/webp,image/gif"
+                    >
+
+
+
+                    <small class="admin-form-help">
+                        Choose an image from your phone or computer.
+                    </small>
+
+                    <div id="image-preview-container" class="admin-image-preview-container">
+                        <img
+                            id="image-preview"
+                            class="admin-image-preview"
+                            src=""
+                            alt="Image preview"
+                            hidden
+                        >
+                    </div>
+
+                    <div class="admin-form-group">
+                        <label for="product-image-url">Image URL</label>
+
+                        <input type="url" id="product-image-url" name="image_url" placeholder="https://example.com/product-image.jpg" autocomplete="off">
+                        <small>Optional - use this instead of uploading an image file.</small>
+                    </div>
+
+                </div>
+
+
+            <div class="admin-form-group">
+
+                <label for="description">
+                    Description
+                </label>
+
+                <textarea
+                    id="description"
+                    name="description"
+                    rows="6"
+                    placeholder="Describe the product..."
+                ></textarea>
+
+            </div>
+
+
+            <div class="admin-product-options">
+
+                <label class="admin-checkbox">
+
+                    <input
+                        type="checkbox"
+                        id="is_available"
+                        name="is_available"
+                    >
+
+                    <span>
+                        Product is available
+                    </span>
+
+                </label>
+
+            </div>
+
+
+            <div class="admin-form-actions">
+
+                <a
+                    href="dashboard.html"
+                    class="admin-secondary-button"
+                >
+                    Cancel
+                </a>
+
+                <button
+                    type="submit"
+                    class="admin-primary-button"
+                >
+                    Save Changes
+                </button>
+
+            </div>
+
+        </form>
+
+    </section>
+
+</main>
+
+
+<script src="js/admin-nav.js"></script>
+<script src="js/edit-product.js"></script>
+
+</body>
+</html>

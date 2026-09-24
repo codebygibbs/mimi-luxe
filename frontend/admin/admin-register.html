@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Create Admin Account | Mimi Luxe</title>
+    <link rel="stylesheet" href="css/admin.css">
+
+</head>
+
+
+<body class="admin-auth-page">
+
+<main class="admin-auth-container">
+
+    <section class="admin-auth-card">
+
+        <a
+            href="../customer/index.html"
+            class="admin-auth-logo"
+        >
+            Mimi Luxe
+        </a>
+
+
+        <p class="eyebrow">
+            ADMINISTRATION
+        </p>
+
+
+        <h1>Create account</h1>
+
+
+        <p class="admin-auth-description">
+            Create an administrator account for your Mimi Luxe store.
+        </p>
+
+
+        <form
+            id="admin-register-form"
+            class="admin-auth-form"
+        >
+
+            <div class="admin-form-group">
+
+                <label for="admin-register-name">
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    id="admin-register-name"
+                    placeholder="Enter full name"
+                    required
+                >
+
+            </div>
+
+
+            <div class="admin-form-group">
+
+                <label for="admin-register-email">
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="admin-register-email"
+                    placeholder="admin@example.com"
+                    required
+                >
+
+            </div>
+
+
+            <div class="admin-form-group">
+
+                <label for="admin-register-password">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="admin-register-password"
+                    placeholder="At least 6 characters"
+                    required
+                >
+
+            </div>
+
+
+            <div class="admin-form-group">
+
+                <label for="admin-register-confirm">
+                    Confirm Password
+                </label>
+
+                <input
+                    type="password"
+                    id="admin-register-confirm"
+                    placeholder="Repeat password"
+                    required
+                >
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="admin-auth-button"
+            >
+                Create Admin Account
+            </button>
+
+
+            <p
+                id="admin-register-message"
+                class="admin-message"
+            ></p>
+
+        </form>
+
+
+        <div class="admin-auth-footer">
+
+            Already have an account?
+
+            <a href="login.html">
+                Sign in
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="js/admin-register.js"></script>
+<script src="js/admin-nav.js"></script>
+
+</body>
+</html>

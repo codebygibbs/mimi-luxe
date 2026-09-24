@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Create Account | Mimi Luxe</title>
+    <link rel="stylesheet" href="css/customer.css" />
+  </head>
+  <body id="top" class="customer-body">
+    <!--  -->
+    <main class="site-main auth-wrap">
+      <section class="auth-card">
+        <p class="eyebrow" data-i18n="account">CUSTOMER ACCOUNT</p>
+        <a class="site-logo auth-logo" href="index.html"
+          >Mimi Luxe<span>Customer Account</span></a
+        >
+        <h1 data-i18n="createYourAccount">Create your account</h1>
+        <p data-i18n="registerDescription">
+          Join Mimi Luxe to keep your orders organised and make checkout faster.
+        </p>
+        <div id="register-message"></div>
+        <form id="register-form" class="form-stack">
+          <div class="field">
+            <label data-i18n="customerName">Full name</label
+            ><input
+              id="full-name"
+              type="text"
+              required
+              minlength="2"
+              autocomplete="name"
+            />
+          </div>
+          <div class="field">
+            <label data-i18n="email">Email</label
+            ><input id="email" type="email" required autocomplete="email" />
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone number</label
+            ><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+2348012345678" />
+            <small>We'll use this number for order updates.</small>
+          </div>
+
+          <div class="field">
+            <label data-i18n="password">Password</label
+            ><input
+              id="password"
+              type="password"
+              required
+              autocomplete="new-password"
+            />
+          </div>
+          <div class="field">
+            <label data-i18n="confirmPassword">Confirm password</label
+            ><input
+              id="confirm-password"
+              type="password"
+              required
+              autocomplete="new-password"
+            />
+          </div>
+          <button
+            class="btn btn-primary"
+            type="submit"
+            data-i18n="createAccount"
+          >
+            Create account
+          </button>
+        </form>
+        <div class="auth-footer">
+          <span data-i18n="existingCustomer">Already have an account?</span>
+          <a href="login.html" data-i18n="signIn">Sign in</a>
+        </div>
+      </section>
+    </main>
+    <footer id="customer-footer" class="site-footer"></footer>
+    <script src="js/customer-common.js"></script>
+    <script src="js/register.js"></script>
+  </body>
+</html>

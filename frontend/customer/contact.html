@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Contact Us | Mimi Luxe</title>
+
+  <link rel="stylesheet" href="../customer/css/customer.css">
+</head>
+
+<body class="customer-body">
+
+  <header class="site-header">
+      <nav class="site-nav container">
+        <a class="site-logo" href="index.html"
+          >Mimi Luxe<span>Beauty • Fragrance • Skincare</span></a
+        >
+        <div class="nav-links" id="nav-links">
+          <a href="index.html" data-i18n="home">Home</a
+          ><a href="products.html" data-i18n="shop">Shop</a
+          ><a href="orders.html" data-auth="logged-in"
+            >Orders</a
+          ><a href="account.html">Account</a>
+          <a href="contact.html">Contact</a>
+          <a href="login.html" data-auth="logged-out" data-i18n="login"
+            >Login</a
+          ><a href="register.html" data-auth="logged-out" data-i18n="register"
+            >Create Account</a
+          ><a
+            href="#"
+            data-auth="logged-in"
+            data-action="logout"
+            data-i18n="logout"
+            >Logout</a
+          >
+        </div>
+        <div class="nav-tools">
+          <label class="sr-only" for="language-select" data-i18n="language"
+            >Language</label
+          ><select
+            id="language-select"
+            class="nav-tool language-select"
+            aria-label="Language"
+          ></select
+          ><a class="nav-tool cart-link" href="cart.html"
+            ><img
+              class="cart-icon"
+              src="assets/icons/cart.svg"
+              alt=""
+              aria-hidden="true"
+            /><span class="sr-only" data-i18n="cart">Cart</span
+            ><span class="cart-count">0</span></a
+          ><button id="menu-toggle" class="menu-toggle" aria-label="Open menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+  <main class="site-main page-container">
+
+    <section class="card contact-page">
+
+      <div class="section-heading">
+        <p class="eyebrow">Customer Service</p>
+
+        <h1>How can we help?</h1>
+
+        <p>
+          Have a question about your order or need help with something?
+          We're here to help.
+        </p>
+      </div>
+
+
+      <div class="contact-options">
+
+        <!-- WHATSAPP -->
+        <a
+          href="#"
+          id="contact-whatsapp"
+          class="contact-option"
+          target="_blank"
+          rel="noopener"
+        >
+          <strong>WhatsApp</strong>
+
+          <span>
+            Chat with us directly on WhatsApp.
+          </span>
+        </a>
+
+
+        <!-- PHONE -->
+        <a
+          href="tel:+2348012345678"
+          id="contact-phone"
+          class="contact-option"
+        >
+          <strong>Call us</strong>
+
+          <span>
+            Speak with customer service.
+          </span>
+        </a>
+
+
+        <!-- EMAIL -->
+        <a
+          href="mailto:hello@mimiluxe.com"
+          id="contact-email"
+          class="contact-option"
+        >
+          <strong>Email us</strong>
+
+          <span>
+            Send us an email and we'll get back to you.
+          </span>
+        </a>
+
+        <div class="contact-service-hours">
+
+          <h2> Customer service hours</h2>
+          
+          <div id="contact-hours">Loading...</div>
+        </div>
+
+      </div>
+
+
+      <div
+        id="order-support"
+        class="contact-order-support"
+        hidden
+      >
+        <h2>Need help with an order?</h2>
+
+        <p id="order-support-text"></p>
+
+        <a
+          href="#"
+          id="order-whatsapp"
+          class="btn btn-primary"
+          target="_blank"
+          rel="noopener"
+        >
+          Contact us about this order
+        </a>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer id="customer-footer" class="site-footer"></footer>
+
+  <script src="js/contact.js"></script>
+  <script src="js/customer-common.js"></script>
+ 
+</body>
+</html>

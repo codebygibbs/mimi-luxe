@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Checkout | Mimi Luxe</title>
+    <link rel="stylesheet" href="css/customer.css" />
+  </head>
+  <body id="top" class="customer-body">
+    <header class="site-header">
+      <nav class="site-nav container">
+        <a class="site-logo" href="index.html"
+          >Mimi Luxe<span>Beauty • Fragrance • Skincare</span></a
+        >
+        <div class="nav-links" id="nav-links">
+          <a href="index.html" data-i18n="home">Home</a
+          ><a href="products.html" data-i18n="shop">Shop</a
+          ><a href="orders.html" data-auth="logged-in"
+            >Orders</a
+          ><a href="account.html">Account</a>
+        </div>
+        
+        <div class="nav-tools">
+          <select id="language-select" class="nav-tool language-select"></select
+          ><a class="nav-tool cart-link" href="cart.html"
+            ><img
+              class="cart-icon"
+              src="assets/icons/cart.svg"
+              alt=""
+              aria-hidden="true"
+            /><span class="sr-only" data-i18n="cart">Cart</span
+            ><span class="cart-count">0</span></a
+          ><button id="menu-toggle" class="menu-toggle" aria-label="Open menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main class="site-main">
+      <div class="container page-heading">
+        <p class="eyebrow" data-i18n="secureCheckout">SECURE CHECKOUT</p>
+        <h1 data-i18n="completeOrder">Complete your order</h1>
+        <p data-i18n="deliveryHelp">
+          Choose delivery or pickup. The backend validates the selected location
+          before creating the order.
+        </p>
+      </div>
+      <section class="section section-tight">
+        <div class="container">
+          <div class="checkout-layout">
+            <form id="checkout-form" class="card form-card">
+              <div id="checkout-message"></div>
+              <div class="form-stack">
+                <div class="form-row">
+                  <div class="field">
+                    <label data-i18n="customerName">Full name</label
+                    ><input
+                      id="customer-name"
+                      required
+                      minlength="2"
+                      autocomplete="name"
+                    />
+                  </div>
+                  <div class="field">
+                    <label data-i18n="email">Email</label
+                    ><input
+                      id="customer-email"
+                      type="email"
+                      required
+                      autocomplete="email"
+                    />
+                  </div>
+                </div>
+                <div class="field">
+                  <label data-i18n="fulfillment">Fulfillment</label>
+                  <div class="radio-grid">
+                    <label class="radio-card"
+                      ><input
+                        type="radio"
+                        name="fulfillment"
+                        value="delivery"
+                        checked
+                      /><span data-i18n="delivery">Delivery</span></label
+                    ><label class="radio-card"
+                      ><input
+                        type="radio"
+                        name="fulfillment"
+                        value="pickup"
+                      /><span data-i18n="pickup">Pickup</span></label
+                    >
+                  </div>
+                </div>
+                <div class="field" id="delivery-group">
+                  <label data-i18n="deliveryAddress">Delivery address</label
+                  ><textarea id="delivery-address"></textarea>
+                </div>
+
+                <div class="field hidden" id="pickup-group">
+                  <label data-i18n="pickupLocation">Pickup location</label
+                  ><div id="pickup-location" class="checkout-pickup-location" aria-live="polite">
+                    Loading pickup location...
+                  </div>
+                  <small>
+                    Your order will be available for collection at this location.
+                  </small>
+                </div>
+
+                <div class="form-actions">
+                  <a
+                    class="btn btn-secondary"
+                    href="cart.html"
+                    data-i18n="backToCart"
+                    >Back to cart</a
+                  ><button
+                    class="btn btn-primary"
+                    type="submit"
+                    data-i18n="placeOrder"
+                  >
+                    Place Order
+                  </button>
+                </div>
+              </div>
+            </form>
+            <aside id="checkout-summary" class="card cart-summary"></aside>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="customer-footer" class="site-footer"></footer>
+    <script src="js/customer-common.js"></script>
+    <script src="js/checkout.js"></script>
+
+  </body>
+</html>
