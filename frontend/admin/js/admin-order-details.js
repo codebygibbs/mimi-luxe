@@ -1,5 +1,5 @@
 
-const API_URL = "http://127.0.0.1:8000";
+const API_URL = "https://menus-tournaments-pix-structures.trycloudflare.vom";
 
 const token =
     localStorage.getItem("admin_access_token");
