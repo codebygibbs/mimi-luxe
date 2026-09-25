@@ -1,4 +1,4 @@
-const API_URL = "https://menus-tournaments-pix-structures.trycloudflare.vom";
+const API_URL = "https://reputation-forestry-continent-delivering.trycloudflare.com";
 
 const adminToken = localStorage.getItem("admin_access_token");
 
