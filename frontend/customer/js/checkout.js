@@ -395,11 +395,6 @@ function renderCheckoutSummary(cart) {
 }
 
 
-/* ============================================================
-   ORDER SUBMISSION LOCK
-============================================================ */
-let orderSubmissionInProgress = false;
-
 
 /* ============================================================
    SUBMIT ORDER
